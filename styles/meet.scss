@@ -1,0 +1,121 @@
+.meet {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 4rem;
+
+    @media (width < 1600px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @media (width < 1100px) {
+        padding: 3rem;
+    }
+
+    @media (width < 800px) {
+        padding: 1.5rem;
+    }
+
+    @media (width < 400px) {
+        padding: 0.5rem;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        width: 70%;
+
+        @media (width < 1600px) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+
+        color: hsl(0, 0%, 0%);
+
+        @media (width < 1600px) {
+            text-align: center;
+        }
+
+        @media (width < 850px) {
+            font-size: 2.75rem;
+        }
+
+        @media (width < 750px) {
+            font-size: 2.2rem;
+        }
+
+        @media (width < 700px) {
+            font-size: 2rem;
+        }
+
+        @media (width < 650px) {
+            font-size: 1.95rem;
+        }
+
+        @media (width < 550px) {
+            font-size: 1.75rem;
+        }
+
+        @media (width < 450px) {
+            font-size: 1.5rem;
+        }
+
+        span {
+            text-decoration-line: underline;
+            text-decoration-color: hsla(177, 79%, 22%, 0.4);
+            text-decoration-thickness: 0.5rem;
+
+            color: hsl(177, 79%, 22%);
+        }
+    }
+
+    &__description {
+        border-bottom: 0.1rem solid hsl(0, 0%, 80%);
+        padding-bottom: 2rem;
+
+        color: hsl(0, 0%, 40%);
+    }
+
+    &__image-wrapper {
+        img {
+            width: 100%;
+            border-radius: 2rem;
+        }
+    }
+
+    &__stats-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+
+        color: hsl(0, 0%, 30%);
+
+        span {
+            font-size: 3rem;
+            font-weight: 700;
+            color: hsl(0, 0%, 0%);
+
+            @media (width < 850px) {
+                font-size: 2.5rem;
+            }
+
+            @media (width < 650px) {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}

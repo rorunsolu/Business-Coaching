@@ -1,0 +1,58 @@
+#header {
+    display: flex;
+    place-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+
+    padding: 15rem 4rem;
+
+    @media (width < 950px) {
+        padding: 10rem 1rem;
+    }
+
+    &__title {
+        font-size: 5.5rem;
+
+        @media (width < 1700px) {
+            font-size: 4.5rem;
+        }
+
+        @media (width < 1200px) {
+            font-size: 3.5rem;
+        }
+
+        @media (width < 950px) {
+            font-size: 3rem;
+        }
+
+        @media (width < 830px) {
+            font-size: 2.5rem;
+        }
+
+        @media (width < 610px) {
+            font-size: 2rem;
+        }
+
+        @media (width < 400px) {
+            font-size: 1.5rem;
+        }
+
+        span {
+            color: hsl(177, 79%, 22%);
+
+            text-decoration-line: underline;
+            text-decoration-color: hsla(177, 79%, 22%, 0.4);
+            text-decoration-thickness: 0.5rem; // Change the thickness here}
+        }
+    }
+
+    &__description {
+        color: hsl(0, 0%, 40%);
+    }
+}

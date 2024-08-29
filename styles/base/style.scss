@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+
+    display: grid;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-rows: 6rem auto auto auto;
+
+    min-height: 100vh;
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+        "solutions solutions solutions"
+        "started started started"
+        "meet meet meet"
+        "studies studies studies"
+        "schedule schedule schedule"
+        "testimonials testimonials testimonials";
+    grid-template-rows: auto;
+    row-gap: 5rem;
+
+    @media (width < 700px) {
+        row-gap: 8rem;
+    }
+}
+
+#solutions {
+    grid-area: solutions;
+}
+
+#started {
+    grid-area: started;
+}
+
+#meet {
+    grid-area: meet;
+}
+
+#studies {
+    grid-area: studies;
+}
+
+#schedule {
+    grid-area: schedule;
+}
+
+#testimonials {
+    grid-area: testimonials;
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.container {
+    width: 90%;
+
+    margin: 0 auto;
+    max-width: 2048px;
+
+    position: relative;
+}
+
+.window-scrolled {
+    border-bottom: 0.1rem solid hsl(0, 0%, 100%);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    box-sizing: content-box;
+
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+}
+
+.button {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+
+    background-color: hsl(22, 85%, 49%);
+    color: hsl(0, 0%, 100%);
+
+    &:hover {
+        outline: 0.1rem solid hsl(22, 85%, 49%);
+
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(22, 85%, 49%);
+
+        transition: all 400ms ease;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
